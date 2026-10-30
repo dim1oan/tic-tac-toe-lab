@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 700" width="1140" height="700">
+  <defs>
+    <style>
+      .bg { fill: #0f0f17; }
+      .text-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #cdd6f4; }
+      .text-sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; fill: #a6adc8; }
+      .text-menu { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #cdd6f4; }
+      .text-score-val { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 22px; font-weight: 700; }
+      .text-turn { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #89b4fa; }
+      .text-cell-x { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 46px; font-weight: 700; fill: #89b4fa; text-anchor: middle; dominant-baseline: central; }
+      .text-cell-o { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 46px; font-weight: 700; fill: #f38ba8; text-anchor: middle; dominant-baseline: central; }
+      .badge-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 10px; font-weight: 600; fill: #a6e3a1; }
+      .annot { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 10px; fill: #fab387; font-style: italic; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1140" height="700" class="bg" />
+
+  <!-- ========================================== -->
+  <!-- SCREEN 1: MAIN GAME WINDOW -->
+  <!-- ========================================== -->
+  <text x="50" y="38" class="text-title">ЭКРАН 1: ГЛАВНОЕ ОКНО ИГРЫ (MODERN DARK THEME)</text>
+  <text x="50" y="54" class="text-sub">Адаптивная компоновка grid (weight=1) | Цветовая палитра Catppuccin Slate</text>
+
+  <!-- Window Container -->
+  <g filter="url(#shadow)">
+    <!-- Main Window Background -->
+    <rect x="50" y="68" width="460" height="600" rx="8" fill="#181825" stroke="#45475a" stroke-width="2"/>
+    <!-- Titlebar -->
+    <path d="M 50 76 Q 50 68 58 68 L 502 68 Q 510 68 510 76 L 510 100 L 50 100 Z" fill="#11111b" />
+    <circle cx="494" cy="84" r="5" fill="#f38ba8" />
+    <circle cx="478" cy="84" r="5" fill="#f9e2af" />
+    <circle cx="462" cy="84" r="5" fill="#a6e3a1" />
+    <text x="66" y="88" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a6adc8">Крестики-нолики — Лабораторная работа (Senior Edition)</text>
+
+    <!-- Menu Bar -->
+    <rect x="50" y="100" width="460" height="30" fill="#1e1e2e" stroke="#313244" stroke-width="1"/>
+    <text x="68" y="120" class="text-menu" font-weight="600">Игра</text>
+    <text x="120" y="120" class="text-menu" fill="#a6adc8">|</text>
+    <text x="140" y="120" class="text-menu" font-weight="600">Настройки окна</text>
+    <text x="250" y="120" class="text-menu" fill="#a6adc8">|</text>
+    <text x="270" y="120" class="text-menu" font-weight="600">Справка</text>
+
+    <!-- Header Score Card -->
+    <rect x="70" y="142" width="420" height="92" rx="8" fill="#1e1e2e" stroke="#45475a" stroke-width="1"/>
+    
+    <!-- Player X Score -->
+    <text x="135" y="165" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a6adc8" text-anchor="middle">Игрок X</text>
+    <text x="135" y="195" class="text-score-val" fill="#89b4fa" text-anchor="middle">2</text>
+
+    <!-- Draws Score -->
+    <text x="280" y="165" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a6adc8" text-anchor="middle">Ничьи</text>
+    <text x="280" y="195" class="text-score-val" fill="#a6adc8" text-anchor="middle">1</text>
+
+    <!-- Player O Score -->
+    <text x="425" y="165" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a6adc8" text-anchor="middle">Игрок O</text>
+    <text x="425" y="195" class="text-score-val" fill="#f38ba8" text-anchor="middle">1</text>
+
+    <!-- Separator Line -->
+    <line x1="85" y1="206" x2="475" y2="206" stroke="#313244" stroke-width="1"/>
+    <!-- Turn Indicator -->
+    <circle cx="215" cy="222" r="4" fill="#89b4fa"/>
+    <text x="226" y="226" class="text-turn">Ход игрока: X</text>
+
+    <!-- 3x3 Grid Buttons -->
+    <!-- Row 0 -->
+    <rect x="76" y="246" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+    <text x="135" y="301" class="text-cell-x">X</text>
+
+    <rect x="206" y="246" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+    <text x="265" y="301" class="text-cell-o">O</text>
+
+    <rect x="336" y="246" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+
+    <!-- Row 1 -->
+    <!-- Hover State Cell -->
+    <rect x="76" y="368" width="118" height="110" rx="8" fill="#45475a" stroke="#89b4fa" stroke-width="2"/>
+    <text x="135" y="420" font-family="'Segoe UI', sans-serif" font-size="10" fill="#89b4fa" text-anchor="middle">[Hover]</text>
+
+    <rect x="206" y="368" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+    <text x="265" y="423" class="text-cell-x">X</text>
+
+    <rect x="336" y="368" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+    <text x="395" y="423" class="text-cell-o">O</text>
+
+    <!-- Row 2 -->
+    <rect x="76" y="490" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+    <rect x="206" y="490" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+    <rect x="336" y="490" width="118" height="110" rx="8" fill="#313244" stroke="#45475a"/>
+
+    <!-- Status Bar -->
+    <path d="M 50 638 L 510 638 L 510 660 Q 510 668 502 668 L 58 668 Q 50 668 50 660 Z" fill="#11111b" />
+    <text x="68" y="655" class="text-sub">Ожидание хода игрока X | Разрешение: 600x700 | Статус: В игре</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- SCREEN 2: WINDOW SETTINGS & DIALOG MODAL -->
+  <!-- ========================================== -->
+  <text x="590" y="38" class="text-title">ЭКРАН 2: ВЫПАДАЮЩЕЕ МЕНЮ И ДИАЛОГ РАЗРЕШЕНИЯ</text>
+  <text x="590" y="54" class="text-sub">Настройки геометрии, кастомный ввод и защита от исключений (try-except)</text>
+
+  <g filter="url(#shadow)">
+    <!-- Screen 2 Window Base -->
+    <rect x="590" y="68" width="500" height="600" rx="8" fill="#181825" stroke="#45475a" stroke-width="2"/>
+    <path d="M 590 76 Q 590 68 598 68 L 1082 68 Q 1090 68 1090 76 L 1090 100 L 590 100 Z" fill="#11111b" />
+    <circle cx="1074" cy="84" r="5" fill="#f38ba8" />
+    <circle cx="1058" cy="84" r="5" fill="#f9e2af" />
+    <circle cx="1042" cy="84" r="5" fill="#a6e3a1" />
+    <text x="606" y="88" font-family="'Segoe UI', sans-serif" font-size="11" fill="#a6adc8">Крестики-нолики — Настройки геометрии</text>
+
+    <!-- Menu Bar Active -->
+    <rect x="590" y="100" width="500" height="30" fill="#1e1e2e" stroke="#313244" stroke-width="1"/>
+    <text x="608" y="120" class="text-menu" fill="#a6adc8">Игра</text>
+    <text x="646" y="120" class="text-menu" fill="#a6adc8">|</text>
+    <rect x="656" y="102" width="124" height="26" rx="4" fill="#313244" />
+    <text x="664" y="119" class="text-menu" font-weight="700" fill="#89b4fa">Настройки окна ▼</text>
+    <text x="792" y="120" class="text-menu" fill="#a6adc8">|</text>
+    <text x="812" y="120" class="text-menu" fill="#a6adc8">Справка</text>
+
+    <!-- Dropdown Menu Box -->
+    <g filter="url(#shadow)">
+      <rect x="656" y="128" width="310" height="190" rx="6" fill="#1e1e2e" stroke="#89b4fa" stroke-width="1.5"/>
+      <text x="674" y="152" class="text-menu">Разрешение: 400 × 500 (Компактный)</text>
+      
+      <!-- Selected Preset -->
+      <rect x="662" y="162" width="298" height="26" rx="4" fill="#313244"/>
+      <text x="674" y="179" class="text-menu" font-weight="600" fill="#89b4fa">Разрешение: 600 × 700 (Стандартный)  ✓</text>
+      
+      <text x="674" y="206" class="text-menu">Разрешение: 800 × 900 (Просторный)</text>
+      <line x1="668" y1="219" x2="954" y2="219" stroke="#45475a" stroke-width="1"/>
+      
+      <!-- Custom resolution trigger -->
+      <rect x="662" y="224" width="298" height="26" rx="4" fill="#45475a"/>
+      <text x="674" y="241" class="text-menu" font-weight="700" fill="#fab387">Пользовательский размер...  ➔</text>
+      
+      <line x1="668" y1="256" x2="954" y2="256" stroke="#45475a" stroke-width="1"/>
+      <text x="674" y="278" class="text-menu">Полноэкранный режим (F11)</text>
+    </g>
+
+    <!-- Connecting Arc -->
+    <path d="M 966 237 C 1020 237, 1030 350, 980 370" fill="none" stroke="#fab387" stroke-width="2" stroke-dasharray="4,4"/>
+
+    <!-- Modal Dialog Window: Custom Resolution -->
+    <g filter="url(#shadow)">
+      <rect x="630" y="348" width="420" height="235" rx="8" fill="#181825" stroke="#fab387" stroke-width="2"/>
+      <!-- Modal Titlebar -->
+      <path d="M 630 356 Q 630 348 638 348 L 1042 348 Q 1050 348 1050 356 L 1050 380 L 630 380 Z" fill="#11111b"/>
+      <text x="646" y="369" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#fab387">Настройка разрешения окна</text>
+
+      <!-- Prompt Text -->
+      <text x="650" y="405" font-family="'Segoe UI', sans-serif" font-size="11" fill="#cdd6f4">Введите желаемое разрешение в формате ШхВ (например, 700x800):</text>
+      <text x="650" y="423" font-family="'Segoe UI', sans-serif" font-size="10" fill="#a6adc8">Лимиты: Мин 360x460 | Макс 2560x1600</text>
+
+      <!-- Input Textbox -->
+      <rect x="650" y="438" width="380" height="38" rx="6" fill="#313244" stroke="#89b4fa" stroke-width="1.5"/>
+      <text x="664" y="462" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#ffffff">700x800</text>
+      <line x1="728" y1="447" x2="728" y2="467" stroke="#89b4fa" stroke-width="1.5"/>
+
+      <!-- Try-Except Validation Badge -->
+      <rect x="650" y="488" width="380" height="30" rx="4" fill="#1e1e2e" stroke="#a6e3a1" stroke-width="1"/>
+      <text x="662" y="507" class="badge-text">✓ try-except: Валидация формата, проверка min/max границ, защита от сбоев GUI</text>
+
+      <!-- Buttons: OK & Cancel -->
+      <rect x="836" y="530" width="88" height="34" rx="6" fill="#89b4fa"/>
+      <text x="880" y="552" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#11111b" text-anchor="middle">OK</text>
+
+      <rect x="936" y="530" width="94" height="34" rx="6" fill="#313244" stroke="#45475a"/>
+      <text x="983" y="552" font-family="'Segoe UI', sans-serif" font-size="12" fill="#cdd6f4" text-anchor="middle">Отмена</text>
+    </g>
+
+    <!-- Bottom Status Bar -->
+    <path d="M 590 638 L 1090 638 L 1090 660 Q 1090 668 1082 668 L 598 668 Q 590 668 590 660 Z" fill="#11111b" />
+    <text x="608" y="655" class="text-sub">Диалог настройки активен | Применяется немедленно при нажатии OK</text>
+  </g>
+</svg>

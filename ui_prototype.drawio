@@ -1,0 +1,214 @@
+<mxfile host="app.diagrams.net" modified="2026-10-30T19:15:00.000Z" agent="Mozilla/5.0" version="21.0.0" type="device">
+  <diagram id="ui_prototype" name="Прототип интерфейса «Крестики-нолики»">
+    <mxGraphModel dx="1422" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#0f0f17" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ЭКРАН 1: ГЛАВНОЕ ОКНО ИГРЫ -->
+        <!-- Заголовок экрана 1 -->
+        <mxCell id="screen1_title" value="ЭКРАН 1: ГЛАВНОЕ ОКНО ИГРЫ (MODERN DARK THEME)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#cdd6f4;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="460" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Внешняя рамка окна 600x700 (масштаб на схеме: 460x580) -->
+        <mxCell id="w1_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#181825;strokeColor=#45475a;strokeWidth=2;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="460" height="580" as="geometry" />
+        </mxCell>
+
+        <!-- Заголовок окна ОС (Title bar) -->
+        <mxCell id="w1_titlebar" value="&amp;nbsp;&amp;nbsp;Крестики-нолики — Лабораторная работа (Senior Edition)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#11111b;strokeColor=#313244;align=left;fontSize=12;fontColor=#a6adc8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="60" y="70" width="460" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Кнопки управления окном (Свернуть, Развернуть, Закрыть) -->
+        <mxCell id="w1_btn_close" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f38ba8;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="498" y="79" width="12" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="w1_btn_max" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9e2af;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="480" y="79" width="12" height="12" as="geometry" />
+        </mxCell>
+        <mxCell id="w1_btn_min" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#a6e3a1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="462" y="79" width="12" height="12" as="geometry" />
+        </mxCell>
+
+        <!-- Верхнее меню программы (tkinter.Menu) -->
+        <mxCell id="w1_menubar" value="&amp;nbsp;&amp;nbsp;&lt;b&gt;Игра&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Настройки окна&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Справка&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e2e;strokeColor=#313244;align=left;fontSize=12;fontColor=#cdd6f4;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="460" height="28" as="geometry" />
+        </mxCell>
+
+        <!-- Карточка счета и информации (Header Panel) -->
+        <mxCell id="w1_scorecard" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e1e2e;strokeColor=#45475a;strokeWidth=1;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="420" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Счет Игрок X -->
+        <mxCell id="w1_score_x" value="&lt;font color=&quot;#a6adc8&quot;&gt;Игрок X&lt;/font&gt;&lt;br&gt;&lt;b&gt;&lt;font size=&quot;5&quot; color=&quot;#89b4fa&quot;&gt;2&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="90" y="148" width="120" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Счет Ничьих -->
+        <mxCell id="w1_score_draws" value="&lt;font color=&quot;#a6adc8&quot;&gt;Ничьи&lt;/font&gt;&lt;br&gt;&lt;b&gt;&lt;font size=&quot;5&quot; color=&quot;#a6adc8&quot;&gt;1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="230" y="148" width="120" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Счет Игрок O -->
+        <mxCell id="w1_score_o" value="&lt;font color=&quot;#a6adc8&quot;&gt;Игрок O&lt;/font&gt;&lt;br&gt;&lt;b&gt;&lt;font size=&quot;5&quot; color=&quot;#f38ba8&quot;&gt;1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="370" y="148" width="120" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Разделитель в карточке счета -->
+        <mxCell id="w1_score_div" value="" style="shape=line;strokeColor=#313244;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="198" width="400" height="5" as="geometry" />
+        </mxCell>
+
+        <!-- Индикатор текущего хода -->
+        <mxCell id="w1_turn" value="&lt;b&gt;&lt;font color=&quot;#89b4fa&quot; size=&quot;3&quot;&gt;● Ход игрока: X&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="90" y="206" width="400" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Игровое поле 3x3 (Adaptive Grid Frame) -->
+        <mxCell id="w1_board_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#181825;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="255" width="420" height="345" as="geometry" />
+        </mxCell>
+
+        <!-- Клетки строки 0 -->
+        <mxCell id="c00" value="&lt;b&gt;&lt;font size=&quot;7&quot; color=&quot;#89b4fa&quot;&gt;X&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="88" y="262" width="124" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c01" value="&lt;b&gt;&lt;font size=&quot;7&quot; color=&quot;#f38ba8&quot;&gt;O&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="228" y="262" width="124" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c02" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="368" y="262" width="124" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Клетки строки 1 -->
+        <mxCell id="c10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#45475a;strokeColor=#89b4fa;strokeWidth=2;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="88" y="377" width="124" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c10_hint" value="&lt;font color=&quot;#a6adc8&quot; size=&quot;1&quot;&gt;[Hover effect]&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="95" y="445" width="110" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c11" value="&lt;b&gt;&lt;font size=&quot;7&quot; color=&quot;#89b4fa&quot;&gt;X&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="228" y="377" width="124" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" value="&lt;b&gt;&lt;font size=&quot;7&quot; color=&quot;#f38ba8&quot;&gt;O&lt;/font&gt;&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="368" y="377" width="124" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Клетки строки 2 -->
+        <mxCell id="c20" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="88" y="492" width="124" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="228" y="492" width="124" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="368" y="492" width="124" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Строка статуса (Status Bar) -->
+        <mxCell id="w1_statusbar" value="&amp;nbsp;&amp;nbsp;Ожидание хода игрока X | Разрешение: 600x700" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#11111b;strokeColor=#313244;align=left;fontSize=11;fontColor=#a6adc8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="60" y="622" width="460" height="28" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- ЭКРАН 2: ВЫПАДАЮЩЕЕ МЕНЮ И ДИАЛОГ ВВОДА РАЗРЕШЕНИЯ -->
+        <!-- ============================================================ -->
+        <mxCell id="screen2_title" value="ЭКРАН 2: ВЫПАДАЮЩЕЕ МЕНЮ И ВАЛИДАЦИЯ ВВОДА" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#cdd6f4;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="580" y="30" width="480" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Фоновая подложка окна настроек -->
+        <mxCell id="w2_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#181825;strokeColor=#45475a;strokeWidth=2;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="580" y="70" width="480" height="580" as="geometry" />
+        </mxCell>
+
+        <!-- Заголовок окна ОС экрана 2 -->
+        <mxCell id="w2_titlebar" value="&amp;nbsp;&amp;nbsp;Крестики-нолики — Настройки разрешения" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#11111b;strokeColor=#313244;align=left;fontSize=12;fontColor=#a6adc8;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="580" y="70" width="480" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="w2_menubar" value="&amp;nbsp;&amp;nbsp;Игра&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;[Настройки окна ▼]&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;|&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Справка" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e1e2e;strokeColor=#313244;align=left;fontSize=12;fontColor=#89b4fa;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="580" y="100" width="480" height="28" as="geometry" />
+        </mxCell>
+
+        <!-- ВЫПАДАЮЩИЙ СПИСОК МЕНЮ (Popup Dropdown) -->
+        <mxCell id="w2_dropdown" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e1e2e;strokeColor=#89b4fa;strokeWidth=1.5;arcSize=4;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="128" width="290" height="195" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_item1" value="&amp;nbsp;&amp;nbsp;Разрешение: 400 × 500 (Компактный)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#cdd6f4;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="640" y="135" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m_item2" value="&amp;nbsp;&amp;nbsp;Разрешение: 600 × 700 (Стандартный)  ✓" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=none;align=left;fontSize=12;fontStyle=1;fontColor=#89b4fa;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="645" y="165" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m_item3" value="&amp;nbsp;&amp;nbsp;Разрешение: 800 × 900 (Просторный)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#cdd6f4;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="640" y="195" width="290" height="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_div1" value="" style="shape=line;strokeColor=#45475a;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="226" width="270" height="4" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_item4" value="&amp;nbsp;&amp;nbsp;&lt;b&gt;Пользовательский размер...&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#fab387;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="640" y="235" width="290" height="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_div2" value="" style="shape=line;strokeColor=#45475a;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="266" width="270" height="4" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m_item5" value="&amp;nbsp;&amp;nbsp;Полноэкранный режим (F11)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#cdd6f4;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="640" y="275" width="290" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- МОДАЛЬНОЕ ДИАЛОГОВОЕ ОКНО ВВОДА (Custom Size Dialog) -->
+        <mxCell id="dialog_modal" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#181825;strokeColor=#fab387;strokeWidth=2;arcSize=6;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="400" height="240" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dialog_titlebar" value="&amp;nbsp;&amp;nbsp;Настройка разрешения окна" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#11111b;strokeColor=#313244;align=left;fontSize=12;fontStyle=1;fontColor=#fab387;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dialog_prompt" value="Введите желаемое разрешение в формате ШхВ (например, 700x800):&lt;br&gt;&lt;font color=&quot;#a6adc8&quot;&gt;Минимум: 360x460 | Максимум: 2560x1600&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#cdd6f4;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="640" y="400" width="360" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Поле ввода с текстом -->
+        <mxCell id="dialog_input" value="&amp;nbsp;&amp;nbsp;700x800" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#89b4fa;strokeWidth=1.5;align=left;fontSize=14;fontColor=#ffffff;fontFamily=Segoe UI;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="640" y="450" width="360" height="36" as="geometry" />
+        </mxCell>
+
+        <!-- Блок обработки исключений (Try-Except validation notice) -->
+        <mxCell id="dialog_validation_badge" value="✓ try-except: Валидация формата, проверка min/max границ, защита от сбоев GUI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e1e2e;strokeColor=#a6e3a1;fontSize=10;fontColor=#a6e3a1;fontFamily=Segoe UI;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="640" y="500" width="360" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Кнопки ОК и Отмена -->
+        <mxCell id="btn_ok" value="&lt;b&gt;OK&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#89b4fa;strokeColor=none;fontColor=#11111b;fontSize=12;fontFamily=Segoe UI;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="810" y="550" width="90" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="btn_cancel" value="Отмена" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#313244;strokeColor=#45475a;fontColor=#cdd6f4;fontSize=12;fontFamily=Segoe UI;arcSize=6;" vertex="1" parent="1">
+          <mxGeometry x="910" y="550" width="90" height="32" as="geometry" />
+        </mxCell>
+
+        <!-- Стрелка взаимосвязи между пунктом меню и диалогом -->
+        <mxCell id="arrow_conn" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#fab387;strokeWidth=2;dashed=1;" edge="1" parent="1" source="m_item4" target="dialog_modal">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="960" y="248" />
+              <mxPoint x="960" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
